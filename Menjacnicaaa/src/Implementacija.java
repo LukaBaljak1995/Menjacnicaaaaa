@@ -18,8 +18,10 @@ public class Implementacija implements MenjacnicaInterfejs {
 		if (!valute.contains(v)) {
 			valute.add(v);
 		}
-
 	}
+
+
+	
 
 	@Override
 	public void obrisiKurs(String naziv, GregorianCalendar datum) {
@@ -44,7 +46,6 @@ public class Implementacija implements MenjacnicaInterfejs {
 	public double pronadjiKupovniKurs(String naziv, GregorianCalendar datum) {
 		for (int i = 0; i < valute.size(); i++) {
 			if (valute.get(i).getNaziv().equals(naziv) && valute.get(i).getDatum().equals(datum)) {
-
 				return valute.get(i).getKupovniKurs();
 			}
 		}
@@ -55,7 +56,6 @@ public class Implementacija implements MenjacnicaInterfejs {
 	public double pronadjiProdajniKurs(String naziv, GregorianCalendar datum) {
 		for (int i = 0; i < valute.size(); i++) {
 			if (valute.get(i).getNaziv().equals(naziv) && valute.get(i).getDatum().equals(datum)) {
-
 				return valute.get(i).getProdajniKurs();
 			}
 		}
