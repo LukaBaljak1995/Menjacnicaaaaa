@@ -34,29 +34,46 @@ public class Valute {
 	}
 
 	public void setNaziv(String naziv) {
+		if (naziv != null && !naziv.isEmpty())
+			throw new RuntimeException("Greska");
+		else
 			this.naziv = naziv;
 	}
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if (skraceniNaziv != null && !skraceniNaziv.isEmpty())
+			throw new RuntimeException("Greska");
+		else
 			this.skraceniNaziv = skraceniNaziv;
 	}
 
 	public void setDatum(GregorianCalendar datum) {
+		if (datum != null)
+			throw new RuntimeException("Greska");
+		else
 			this.datum = datum;
 	}
 
 	public void setProdajniKurs(double prodajniKurs) {
+		if (prodajniKurs < 0)
+			throw new RuntimeException("Greska");
+		else
 			this.prodajniKurs = prodajniKurs;
 	}
 
 	public void setSrednjiKurs(double srednjiKurs) {
+		if (srednjiKurs < 0)
+			throw new RuntimeException("Greska");
+		else
 			this.srednjiKurs = srednjiKurs;
 	}
 
 	public void setKupovniKurs(double kupovniKurs) {
+		if (kupovniKurs < 0)
+			throw new RuntimeException("Greska");
+		else
 			this.kupovniKurs = kupovniKurs;
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
